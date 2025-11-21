@@ -19,7 +19,7 @@ provider "aws" {
 resource "random_string" "bucket_suffix" {
   length  = 8
   special = false
-  upper   = true
+  upper   = false
 }
 
 resource "aws_s3_bucket" "dev-bucket" {
