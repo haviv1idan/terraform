@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tfplan
-          path: plan.txt
+          path: s3-bucket/plan.txt
 
       - name: Terraform Apply (only on push to main)
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/main')
